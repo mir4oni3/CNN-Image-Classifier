@@ -1,10 +1,10 @@
 # CNN-Image-Classifier
-This is a Convolutional Neural Network implementation that classifies card images into 53 classes(4 suits * 13 cards + joker).
+This is a Convolutional Neural Network implementation that classifies card images into 53 classes(4 suits * 13 cards + joker). The dataset consists of ~120 training examples for each card.
 # Python libraries used
 Pandas library is used to parse the csv data. Matplotlib is used to make graphs and visualizations about the data and results. PyTorch is used for the creation of the neural network.
 # About the Network architecture
 ## Data augmentation
-Firstly, data augmentation is used to expand the trainig data. The transformations aren't very heavy - slight rotation of the train images is applied at random, color jitter is introduced to show the model different lightning and contrast. Input image data is normalized - subtracted mean and divided by standard deviation to ensure faster convergence and even weight updates during training. The input data is then converted to a pytorch tensor.
+Firstly, data augmentation is used to expand the training data. The transformations aren't very heavy - slight rotation of the train images is applied at random, color jitter is introduced to show the model different lightning and contrast. Input image data is normalized - subtracted mean and divided by standard deviation to ensure faster convergence and even weight updates during training. The input data is then converted to a pytorch tensor.
 ## DataSet and DataLoader
 To use the Pandas dataframe, which is the parsed csv data, MyDataset inherits Dataset, such that it can be used by the DataLoader to load the training data into training batches.
 ## Loss and Optimizer
